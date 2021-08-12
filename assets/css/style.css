@@ -1,4 +1,4 @@
-/*reset CSS*/
+/* reset CSS*/
 *{
     padding: 0;
     margin: 0;
@@ -6,52 +6,112 @@
 }
 /* 
     0.các thành phần con
-    1.vị trí.
-    2.kích thước.
-    3.màu sắc.
-    4.kiểu dáng.
+    1.vị trí
+    2.màu sắc
+    3.kiểu dáng
 */
 #main {
-
+    
 }
 
-html {
+html{
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 #header {
-    height: 46px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
     background-color: #000;
-} 
+    height: 46px;
+}
 
-#nav li{
+#nav {
     display: inline-block;
 }
 
-#nav li:hover a {
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block; 
+    width: 168px;
+}
+
+#nav li a{
+    text-decoration: none;
+    padding: 0 46px; /* hoặc dùng display :inline-block*/
+    line-height: 46px;    
+    /* hoặc dùng padding: 12px 46px*/ 
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav >li:hover >a,
+#nav .subnav li:hover a{
     color: #000;
     background-color: #ccc;
 }
-#nav li a {
-    color: #fff;
-    text-decoration: none; 
-    padding: 0px 24px;
-    display: inline-block;
-    line-height: 46px;
-}
 
 #nav .subnav{
-    display: none;
+    position: absolute;
+    display: none;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+#nav .subnav a{
+    color: black;
+    min-width: 200px;
+    padding: 0 40px;
+    line-height: 40px;
+    display: block;
+}
+
+#nav .nav-arrow-down{
+    font-size: 16px;
+}
+
+#header .header-search{
+    float: right;
+    
+}
+
+#header .header-search:hover{
+    background-color: #f44336;
+
+}
+
+#header .icon-search{
+    line-height: 46px;
+    font-size: 18px;
+    padding: 24px;
+    cursor: pointer;
 }
 
 #slider {
+    margin: 46px 0 0 0;
+    background-color: #333;
+    height: 1000px;
 
-} 
+    
+}
 
 #content {
-
-} 
+    
+}
 
 #fooder {
-
-} 
+ 
+    
+}
