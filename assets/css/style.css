@@ -27,6 +27,7 @@ html{
     color: #fff;
     background-color: #000;
     height: 46px;
+    z-index: 1;
 }
 
 #nav {
@@ -35,6 +36,7 @@ html{
 
 #nav > li{
     display: inline-block;
+    width: 98px;
 }
 #nav li{
     position: relative;
@@ -43,13 +45,14 @@ html{
 #nav > li > a{
     color: #fff;
     text-transform: uppercase;
-    display: inline-block; 
-    width: 168px;
+    display: block;
+    text-align: center; 
+    font-size: small;
 }
 
 #nav li a{
     text-decoration: none;
-    padding: 0 46px; /* hoặc dùng display :inline-block*/
+    padding:0 15px; /* hoặc dùng display :inline-block*/
     line-height: 46px;    
     /* hoặc dùng padding: 12px 46px*/ 
 }
@@ -67,13 +70,15 @@ html{
 #nav .subnav{
     position: absolute;
     display: none;  
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    list-style-type: none;
 }
 
 #nav .subnav a{
     color: black;
-    min-width: 200px;
-    padding: 0 40px;
+    min-width: 150px;
+    padding: 0 14px;
     line-height: 40px;
     display: block;
 }
@@ -100,17 +105,39 @@ html{
 }
 
 #slider {
-    margin: 46px 0 0 0;
-    background-color: #333;
-    height: 1000px;
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/chicago.jpg') top center / cover no-repeat; 
+}
 
-    
+.content-slider{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center  ;
+    width: 100%;
+    margin: 32px;
+}
+
+.head-content-slider{
+    font-weight: 500;
+    margin: 10px;
+    font-size:24px;
+
+}
+
+.text-content-slider{
+    font-style: normal;
+    margin: 15px 0;
+    font-weight: bolder;
+    font-size: small;
 }
 
 #content {
-    
+   
 }
-
 #fooder {
  
     
