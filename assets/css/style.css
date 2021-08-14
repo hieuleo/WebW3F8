@@ -4,12 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* 
-    0.các thành phần con
-    1.vị trí
-    2.màu sắc
-    3.kiểu dáng
-*/
+
 #main {
     
 }
@@ -18,6 +13,16 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+.clear{
+    clear: both;
+}
+
+.text-white{
+    color: #fff;
+}
+
+/*header*/
 
 #header {
     position: fixed;
@@ -47,12 +52,12 @@ html{
     text-transform: uppercase;
     display: block;
     text-align: center; 
-    font-size: small;
+    font-size:medium;
 }
 
 #nav li a{
     text-decoration: none;
-    padding:0 15px; /* hoặc dùng display :inline-block*/
+    padding:0 10px; /* hoặc dùng display :inline-block*/
     line-height: 46px;    
     /* hoặc dùng padding: 12px 46px*/ 
 }
@@ -104,6 +109,8 @@ html{
     cursor: pointer;
 }
 
+/*slider*/
+
 #slider {
     position: relative;
     margin-top: 46px;
@@ -135,9 +142,172 @@ html{
     font-size: small;
 }
 
+/*content*/
 #content {
    
 }
+
+#content .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+.content-section .content-heading{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    line-height: auto;
+}
+
+.content-section .content-subheading{
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+    line-height: auto;
+
+}
+
+/*about-content*/
+
+.content-section #about-content{
+    text-align: justify;
+    line-height: 1.5;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    display: block;
+    margin: 15px 0;
+}
+
+/*about-member-content*/
+
+.list-member{
+    padding: 32px 0;
+}
+
+.list-member .info-member{
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+.info-member .name-member{
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.info-member .img-member{
+    width: 154px;
+    border-radius: 5px;
+}
+
+/*tour-content*/
+
+.tour{
+    background-color: #000;
+}
+
+.list-tour{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style-type: none;
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.list-tour .moth-tour{
+    color: #757575;
+    padding:  8px 16px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.list-tour .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.list-tour .number-ticket{
+    float: right;
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/*tickets*/
+
+.list-ticket{
+    padding: 32px 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.info-ticket{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.info-ticket .img-tour{
+    width: 100%;
+    display: block;
+}
+
+.info-ticket .img-tour:hover{
+    opacity: 0.6;
+}
+
+.info-ticket .dis-ticket{
+    background-color: #fff;
+    padding: 0.15px 16px;
+    font-size: 15px;
+}
+
+.info-ticket .dis-ticket .location-ticket{
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.info-ticket .dis-ticket .date-ticket{
+    opacity: 0.6;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.info-ticket .dis-ticket .content-ticket{
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.info-ticket .dis-ticket .click-buy-ticket{
+    font-size: 15px;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    border: none;
+}
+
+.info-ticket .dis-ticket .click-buy-ticket:hover{
+    background-color: #ccc;
+}
+
 #fooder {
  
     
