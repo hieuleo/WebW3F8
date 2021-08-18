@@ -308,7 +308,110 @@ html{
     background-color: #ccc;
 }
 
+/*modal-buy-ticket*/
+
+.modal.open{
+    display: flex;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    max-width: calc(100% - 32px);
+    animation: ModalBuyTicket ease 0.5s;
+}
+
+.modal-close{
+    float: right;
+    color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.modal-close:hover,
+.modal-body .modal-button-buy-ticket:hover{
+    background-color: #7df3e7;
+    color: #000;
+}
+
+.modal-heading {
+    font-size: 30px;
+    background-color: #009688;
+    padding: 48px 16px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.modal-body{
+    font-size: 15px;
+    margin: 24px 16px;
+}
+
+.modal-body .modal-label{
+    width: 100%;
+    margin-top:32px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.modal-body .modal-input{
+    width: 100%;
+    padding: 8px ;
+}
+
+.modal-body .modal-button-buy-ticket{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 32px;
+
+    padding: 16px;
+    width: 100%;
+    background-color: #009688;
+    border: none;
+    color: #fff;
+}
+
+.modal-fooder{
+    float: right;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.modal-fooder p a{
+    color: #2196F3;
+    margin-left: 8px;
+}
+
+.modal-fooder p a:hover{
+    color: #6db1e9;
+}
+
+
 #fooder {
- 
-    
+}
+
+@keyframes ModalBuyTicket {
+    from {
+        opacity: 0;
+        transform: translateY(-68px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

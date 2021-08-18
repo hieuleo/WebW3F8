@@ -89,7 +89,7 @@
                                 <h3 class="location-ticket">New York</h3>
                                 <p class="date-ticket">Fri 27 Nov 2021</p>
                                 <p class="content-ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="text-white click-buy-ticket">Buy Tickets</button>
+                                <button class="text-white click-buy-ticket js-click-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="info-ticket">
@@ -98,7 +98,7 @@
                                 <h3 class="location-ticket">Paris</h3>
                                 <p class="date-ticket">Sat 28 Nov 2021</p>
                                 <p class="content-ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="text-white click-buy-ticket">Buy Tickets</button>
+                                <button class="text-white click-buy-ticket js-click-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="info-ticket">
@@ -107,7 +107,7 @@
                                 <h3 class="location-ticket">San Francisco</h3>
                                 <p class="date-ticket">Sun 29 Nov 2016</p>
                                 <p class="content-ticket">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="text-white click-buy-ticket">Buy Tickets</button>
+                                <button class="text-white click-buy-ticket js-click-buy-ticket">Buy Tickets</button>
                             </div>  
                         </div>
                         <div class="clear"></div>
@@ -123,9 +123,77 @@
             </div>
         </div>
 
+        <!--modal-buy-tickec-->
+        <div class="modal js-modal">
+            
+            
+            <div class="modal-container js-modal-container">
+                <div class="js-modal-close">
+                    <i class="modal-close ti-close"></i>
+                </div>
+                <div class="text-white modal-heading">
+                    <i class="ti-bag"></i>
+                    Tickets
+                </div>
+                <div class="modal-body">
+                    <label for="" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input type="text" class="modal-input" placeholder="How many?">
+    
+                    <label for="" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send To
+                    </label>
+                    <input type="text" class="modal-input" placeholder="Enter email">
+                    
+                    <button class="modal-button-buy-ticket">
+                        pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+    
+                <div class="modal-fooder">
+                    <p>Need<a href="https://www.facebook.com/quochieu.nguyen.581/" target=" blank ">help?</a></p>
+                </div>
+            </div>
+
+
+        </div>
+
         <div id="fooder">
 
         </div>
     </div>
+    <script>
+
+        const modal = document.querySelector('.js-modal')
+        const ClickContainer = document.querySelector('.js-modal-container')
+        const ClickOpenModals = document.querySelectorAll('.js-click-buy-ticket')
+        const ClickCloseModal = document.querySelector('.js-modal-close')
+        function OpenModal(){
+            modal.classList.add('open')
+        }
+
+        function CloseModal(){
+            modal.classList.remove('open')
+        }
+
+        function StopClose(event){
+            event.stopPropagation()
+        }
+        
+        for (const ClickOpenModal of ClickOpenModals){
+            ClickOpenModal.addEventListener('click',OpenModal)
+        }
+
+        ClickCloseModal.addEventListener('click',CloseModal)
+
+        modal.addEventListener('click',CloseModal)
+
+        ClickContainer.addEventListener('click',StopClose)
+
+    </script>
 </body>
 </html>
