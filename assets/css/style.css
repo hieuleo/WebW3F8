@@ -11,15 +11,53 @@
 
 html{
     font-family: Arial, Helvetica, sans-serif;
-    
+    scroll-behavior: smooth;
 }
 
 .clear{
     clear: both;
 }
 
+/*common*/
+
+.padding-32{
+    padding: 32px 0;
+}
+
 .text-white{
     color: #fff;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.row{
+    margin: 0 -8px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.column{
+    float: left;
+}
+
+.column-third{
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.column-half{
+    padding: 0 8px;
+    width: 50%;
+}
+
+.column-full{
+    width: 100%;
+    padding: 0 8px;
 }
 
 /*header*/
@@ -97,6 +135,11 @@ html{
     
 }
 
+.header-search a{
+    text-decoration: none;
+    color: #fff;
+}
+
 #header .header-search:hover{
     background-color: #f44336;
 
@@ -151,7 +194,7 @@ html{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 16px;
+    padding: 64px 16px 84px;
 }
 
 .content-section .content-heading{
@@ -187,17 +230,6 @@ html{
 }
 
 /*about-member-content*/
-
-.list-member{
-    padding: 32px 0;
-}
-
-.list-member .info-member{
-    float: left;
-    width: 33.33333%;
-    text-align: center;
-}
-
 .info-member .name-member{
     font-size: 15px;
     margin: 15px 0;
@@ -251,16 +283,7 @@ html{
 /*tickets*/
 
 .list-ticket{
-    padding: 32px 8px;
-    margin-left: -16px;
-    margin-right: -16px;
-}
-
-.info-ticket{
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
-    margin-bottom: 16px;
+    padding: 32px 0;
 }
 
 .info-ticket .img-tour{
@@ -304,8 +327,11 @@ html{
     border: none;
 }
 
-.info-ticket .dis-ticket .click-buy-ticket:hover{
+.info-ticket .dis-ticket .click-buy-ticket:hover,
+.contact-input .submit-contact:hover{
     background-color: #ccc;
+    cursor: pointer;
+    color: #000;
 }
 
 /*modal-buy-ticket*/
@@ -343,7 +369,7 @@ html{
 
 .modal-close:hover,
 .modal-body .modal-button-buy-ticket:hover{
-    background-color: #7df3e7;
+    background-color: #30a398;
     color: #000;
 }
 
@@ -400,8 +426,73 @@ html{
     color: #6db1e9;
 }
 
+/*contact*/
 
+.info-contact{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0 0 16px;
+}
+
+.info-contact p i{
+    margin: 0 6px;
+}
+
+.contact-input .row input{
+    padding: 8px;
+    width: 100%;
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+
+.contact-input .submit-contact{
+    float: right;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin: 8px 0;
+}
+
+
+/*map*/
+#map img{
+    width: 100%;
+}
+
+
+/*fooder*/
 #fooder {
+    padding: 64px 16px;
+}
+
+#fooder >a{
+    text-decoration: none;
+}
+
+#fooder a i{
+    color: rgb(104, 102, 102);
+    font-size: 24px;
+}
+
+
+.end-fooder{
+    color: rgb(104, 102, 102);
+    margin: 16px;
+    font-size: 15px;
+}
+
+.end-fooder a{
+    color: rgb(104, 102, 102);
+}
+
+
+#fooder a:hover{
+    opacity: 0.5;
 }
 
 @keyframes ModalBuyTicket {
