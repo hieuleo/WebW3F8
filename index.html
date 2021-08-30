@@ -8,6 +8,7 @@
     <link rel="icon" href="./assets/img/title_icon/Avatar_3.jpg" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div id="main">
@@ -33,12 +34,17 @@
             <!--end_nav-->
 
             <!--begin_search-->
-
             <div class="header-search">
                 <a href="https://www.google.com/" target="black"><i class="icon-search ti-search"></i></a>
             </div>
             <!--end_search-->
 
+            
+            <!--Mobi-menu-->
+            <div>
+                <i id="js-mobi-menu" class="mobi-menu ti-menu"></i>
+            </div>
+            
         </div>
 
         <div id="slider">
@@ -235,6 +241,35 @@
 
         ClickContainer.addEventListener('click',StopClose)
 
+    </script>
+
+    <script>
+        var header = document.getElementById('header');
+        var Btnmenu = document.getElementById('js-mobi-menu');
+        var heightHeader = header.clientHeight;
+        var ClickBtnmenus = document.querySelectorAll('#nav li a[href*="#"]')
+        
+        Btnmenu.onclick = function(){
+            var menuclose = header.clientHeight === heightHeader;
+            if(menuclose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null;
+            }
+        }
+
+        for (var i=0; i<=ClickBtnmenus.length; i++){
+            var ClickBtnmenu =ClickBtnmenus[i];
+            ClickBtnmenu.onclick = function(){
+                var Btnmore = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                if(Btnmore){
+                    event.preventDefault();
+                }else{
+                    header.style.height = null;
+                }
+            }
+
+        }
     </script>
 </body>
 </html>
