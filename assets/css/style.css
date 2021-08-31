@@ -163,7 +163,8 @@ html{
 #slider {
     position: relative;
     margin-top: 46px;
-    padding-top: 50%; 
+    padding-top: 50%;
+    background: url('/assets/img/slider/theband.jpg') top center / cover no-repeat; 
 }
 
 .content-slider{
