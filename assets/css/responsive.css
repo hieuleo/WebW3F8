@@ -39,22 +39,16 @@
 
     #nav .subnav {
         position: initial;   
-        background-color: #333;
+        background-color: rgba(137, 131, 131, 0.578);
     }
 
     #nav .subnav a{
         padding: 4px 32px;  
-        color: #fff;
+        color: #fff;    
     }
     
     #content .content-section {
         padding: 48 16px;
-    }
-
-    .column-third{
-        width: 100%;
-        padding: 0 8px;
-        margin: 8px 0;
     }
 
     .info-member .img-member{
@@ -65,7 +59,12 @@
         margin-bottom: 24px;
     }
 
-    .column-half{
-            width: 100%;
-        }
+    .s-full-width{
+        width: 100% ;
+        margin: 8px 0;
+    }
+
+    .contact-input .row input{
+        margin: 0;
+    }
 }
